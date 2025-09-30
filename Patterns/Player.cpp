@@ -25,25 +25,24 @@ private:
 
         const float distance = 40;
 
-        // ушел за левую часть
+         
         if (boundsLeft <= -distance)
         {
             player.setPosition(sf::Vector2f(static_cast<float>(WIN_X) - (distance * 2.5f), playerPosition.y));
         }
 
-        // ушел за правую часть
         if (boundsLeft + bounds.width >= static_cast<float>(WIN_X)) 
         {
             player.setPosition(sf::Vector2f(0.f, playerPosition.y));
         }
 
-        // Ушел вверх 
+         
         if (boundsTop <= -distance)
         {
             player.setPosition(sf::Vector2f(playerPosition.x, static_cast<float>(WIN_Y)));
         }
 
-        // ушел вниз 
+      
         if (boundsTop > static_cast<float>(WIN_Y))
         {
             player.setPosition(sf::Vector2f(playerPosition.x, 0.f));

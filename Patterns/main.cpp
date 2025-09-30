@@ -11,9 +11,11 @@ using namespace std;
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(WIN_X, WIN_Y), "Game", sf::Style::Close);
+
     window.setVerticalSyncEnabled(true);
     float speed = 500.f;
     float deceleration = 0.99f;
+    
     sf::Clock clock;
     Player player(string("../textures/developer.jpg"), 64, 64);
     while (window.isOpen())
